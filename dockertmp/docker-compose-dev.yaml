@@ -5,6 +5,7 @@ services:
       - 3307:3306
     volumes:
       - ./mysql:/var/lib/mysql
+      - ./user.sql:/tmp/sql/testdata_user
     networks:
       mysql_networks:
         ipv4_address: 172.16.238.10

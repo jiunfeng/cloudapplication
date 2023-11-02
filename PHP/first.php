@@ -1,6 +1,10 @@
+<?php
+header("Content-type:text/html;charset=utf-8");
+?>
 <html>
 
 <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="keywords" content="first,php,code"> <!--可以被收尋引擎找到的 -->
     <meta name="description" content="my first php code"><!--網頁收尋引擎下面會看到的描述 -->
     <title>first php code</title>
