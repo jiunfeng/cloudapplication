@@ -1,0 +1,30 @@
+version: "3.6"
+services:
+  mysql:
+    restart: always
+    image: mysql:8
+    container_name: mysql-8
+    secrets:
+      - mysql-pass
+      #- db_password
+    environment:
+      #- MYSQL_ROOT_PASSWORD=123456789
+      - MYSQL_ROOT_PASSWORD_FILE=/run/secrets/mysql-pass
+    #volumes:
+      #- ./test:/var/lib/mysql
+  
+  adminer:
+    restart: always
+    image: adminer
+    ports:
+      - 8080:8080
+
+#need setting file target when useing secert on composefile 
+secrets:
+  mysql-pass:
+    file: ./mysql-passwd.txt
+  # docker compose 不可直接使用 secret 要使用 stack技術
+  #db_password:   
+  #  external: true
+      
+      

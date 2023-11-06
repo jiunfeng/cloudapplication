@@ -11,10 +11,6 @@
 
 </head>
 <script>
-    <?php
-    include_once "conn.php";
-    ?>
-
     function doTest() {
         //let或var 設定變數名稱
         var userId = document.getElementById("userId").value;
