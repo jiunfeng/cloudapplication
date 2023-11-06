@@ -55,11 +55,17 @@
             <!-- submit1 -->
         </form>
     </div>
-    <div class="container-sm" name="testText1" id="testText">Test text!!!</div>
+    <div class="container-sm" name="testText1" id="testText">Test text!!!<br><br><br><br><br></div>
 
     <form class="container-sm" method="post">
-        <input type="text" name="username" />
-        <input type="password" name="password" />
+        <div class="container-sm">
+            username[1]<input type="text" name="username[]" />
+            username[2]<input type="text" name="username[]" />
+            <br>
+            username1 <input type="password" name="username1" />
+            username1 <input type="password" name="username1" />
+        </div>
+        <br>
         <input type="submit" value="Submit" />
         <!-- submit2 -->
     </form>
@@ -77,6 +83,10 @@
     所以當 使用 submit2 echo pwd會顯示未定義
 */
 echo @$_POST["pwd"]; //有加@ 網頁loading時不會出現錯誤訊息
-echo $_POST["password"];
-echo $_POST["username"];
+
+echo $_POST["username"][0] ?? '??';
+echo $_POST["username"][1] ?? '??';
+echo "---";
+echo $_POST["username1"] ?? '??'; //若沒有在設計時加入[]將他作為陣列，只會取得最後一個username1
+
 ?>
