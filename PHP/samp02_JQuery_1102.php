@@ -129,7 +129,24 @@
                     <div class="col-4"><input type="text" name="userName" id="userName" placeholder="請輸入姓名" required> </div> <!--JQuery直接使用placeholder就可以做檢查 -->
                 </div>
                 <div class="row">
-                    <div class="col-6 text-center"><input type="submit" class="btn btn-primary" value="確定"></div>
+                    <div class="col-6 text-center"><input type="submit" class="btn btn-primary" value="確定">
+                        <!-- a 超連結用 href 要連結的路徑或檔案
+                        &nbsp; 空格
+                        -->
+                        <a href="linksql.php" class="btn btn-warning">取消</a>
+                        <!-- 取消的另外一種寫法 功能上相同但<button>靈活性更廣泛可以放一張圖讓使用者點擊之類的功能而不是像input單純只能給個value就執行 js
+                        history.back():javascript的回上一頁
+                        history.back()=history.go(-1)要回到上幾個頁面
+                        onclick:點選
+                    <input type="button" class="btn btn-warning" onclick="history.back()" value="取消">
+                    <button type="button" class="btn btn-warning" onclick="doBack()">取消</button>
+                    <script>
+                        function doBack(){
+                            history.back();
+                        }
+                    </script>
+                    -->
+                    </div>
                     <!-- input type 使用button不會作用需要另外寫方法，submit則會直接使用上方的required -->
                 </div>
         </form>

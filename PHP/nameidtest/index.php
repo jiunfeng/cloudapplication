@@ -11,14 +11,15 @@
 <script>
     function doTest() {
         //document.這是JS原生呼叫變數的方法
-        var doTest_Id = document.getElementById("userId").value;
+        var doTest_Id = document.getElementById("userId01").value;
         console.log("byidJS__" + doTest_Id);
         var doTest_Name = document.getElementsByName("userId1");
-        console.log("bynameJS__" + doTest_Name[0].value);
+        console.log("bynameJSlist01__" + doTest_Name[0].value);
+        console.log("bynameJSlist02__" + doTest_Name[1].value);
         //innerHTML 直接取欄位初始得值
-        var doTest_tes = document.getElementById("tes").innerHTML;
+        var doTest_tes = document.getElementById("testText").innerHTML;
         console.log("byidtes__" + doTest_tes);
-        console.log("-----------------------------");
+        console.log("-------------JQTEST----------------");
 
         //JQuery取值方法 宣告以＄開頭只是慣例，表示這是由JQ來的物件
         var $doTest_Id_jq = $("#userId").val();
@@ -30,6 +31,7 @@
         console.log(".val()____" + $("#testText").val());
         console.log(".val()____" + $("#testText").html());
         console.log(".val()____" + $("#testText").text());
+        console.log("~~~~~~~~~~END~~~~~~~~~~~~~");
 
         //php ajax實例
         // $.ajax(
@@ -45,9 +47,9 @@
 <body>
     <div class="container-xxl">
         <div class="col-2">測試輸入值</div>
-        <div class="col-4"><input type="text" name="userId1" id="userId" size="100" onblur="doTest()">777</div>
+        <div class="col-4">value01<input type="text" name="userId1" id="userId01" size="100" onblur="doTest()"></div>
         <!-- 重複使用相同name 並且呼叫 doTest該值無法被更改 -->
-        <div class="col-4"><input type="text" name="userId1" id="userId1" size="100" onblur="doTest()"></div>
+        <div class="col-4">value02<input type="text" name="userId1" id="userId02" size="100" onblur="doTest()"></div>
         <form action="" method="post">
             請輸入密碼:<input type="text" name="pwd"><br>
             請輸入密碼:<input type="text" name="username"><br>

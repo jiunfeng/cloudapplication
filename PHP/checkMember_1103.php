@@ -1,7 +1,7 @@
 <?php
-/*
-include "conn.php";
 
+include "conn.php";
+/*
 include_once "conn.php"; //只會引用一次不管多少CODE引用
 require "conn.php";
 require_once "conn.php";
