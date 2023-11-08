@@ -1,0 +1,43 @@
+composer create-project laravel/laravel cloud01 
+創建專案 cloud01 專案名稱
+
+
+vendor
+外掛套件，如果要使用別人的外掛 就丟在 vendor
+
+tests
+單元測試程式用
+
+storage
+規劃可以存放各類文件 圖檔 json 等等的地方 
+
+routes
+要連到哪裡去都在這邊設定才會生效
+所有連結都要在這邊設定
+通常大部分情況會用到的
+web-網站內部用 沒有對外
+api-要給別人呼叫的時候使用
+
+resources
+放code的地方
+views-放網頁 html jquery等等網頁的地方 副檔名.blade.php 要多一個.blade
+~所謂MVC架構 M:model與資料庫相關
+            V:view 網頁相關
+            C:controller 控制器
+
+public
+在這個專案架構下 只有 public會對外其他都不對外 真正網頁對外的地方
+
+database
+放資料庫指令的地方
+
+config 
+放設定的地方
+
+
+app
+主要程式都放在這邊
+M C 都放在這邊
+Models 寫資料庫的地方
+http>controller放控制的地方
+http>middleware中繼軟體
