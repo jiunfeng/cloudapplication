@@ -1,6 +1,9 @@
 composer create-project laravel/laravel cloud01 
 創建專案 cloud01 專案名稱
-
+ $php .\artisan serve
+專案資料夾 表示啟動資料夾
+php .\artisan make:controller Front/IndexController  
+會在 app>Http>Controllers下建立一個Front資料夾並創建IndexController.php
 
 vendor
 外掛套件，如果要使用別人的外掛 就丟在 vendor
