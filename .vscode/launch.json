@@ -6,41 +6,120 @@
     "configurations": [
         {
             "type": "java",
-            "name": "Launch Current java File",
+            "name": "Hw6_1",
+            "request": "launch",
+            "mainClass": "practice.ch06.Hw6_1",
+            "projectName": "cloudapplication_606917fb"
+        },
+        {
+            "type": "java",
+            "name": "Hw5_4_switch",
+            "request": "launch",
+            "mainClass": "practice.ch05.Hw5_4_switch",
+            "projectName": "cloudapplication_606917fb"
+        },
+        {
+            "type": "java",
+            "name": "Hw5_4_try",
+            "request": "launch",
+            "mainClass": "practice.ch05.Hw5_4_try",
+            "projectName": "cloudapplication_606917fb"
+        },
+        {
+            "type": "java",
+            "name": "Hw5_4",
+            "request": "launch",
+            "mainClass": "practice.ch05.Hw5_4",
+            "projectName": "cloudapplication_606917fb"
+        },
+        {
+            "type": "java",
+            "name": "Lotto",
+            "request": "launch",
+            "mainClass": "practice.ch05.Lotto",
+            "projectName": "cloudapplication_606917fb"
+        },
+        {
+            "type": "java",
+            "name": "Hw5_3",
+            "request": "launch",
+            "mainClass": "practice.ch05.Hw5_3",
+            "projectName": "cloudapplication_606917fb"
+        },
+        {
+            "type": "java",
+            "name": "Hw5_2",
+            "request": "launch",
+            "mainClass": "practice.ch05.Hw5_2",
+            "projectName": "cloudapplication_606917fb"
+        },
+        {
+            "type": "java",
+            "name": "Hw5_1",
+            "request": "launch",
+            "mainClass": "practice.ch05.Hw5_1",
+            "projectName": "cloudapplication_606917fb"
+        },
+        {
+            "type": "java",
+            "name": "Launch Current File",
             "request": "launch",
             "mainClass": "${file}"
         },
         {
             "type": "java",
-<<<<<<< HEAD
-            "name": "app3_1",
+            "name": "App_static",
             "request": "launch",
-            "mainClass": "app3_1",
-            "projectName": ""
-=======
+            "mainClass": "practice.App_static",
+            "projectName": "cloudapplication_606917fb"
+        },
+        {
+            "type": "java",
+            "name": "App_array",
+            "request": "launch",
+            "mainClass": "practice.App_array",
+            "projectName": "cloudapplication_606917fb"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch1)",
+            "request": "launch",
+            "mainClass": "com.example.Main",
+            "projectName": "project-name",
+            "cwd": "${fileDirname}",
+            "console": "internalConsole"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)",
+            "request": "launch",
+            "mainClass": "com.example.Main",
+            "projectName": "project-name",
+            "cwd": "${fileDirname}",
+            "console": "internalConsole"
+        },
+        {
+            "type": "java",
+            "name": "app11111",
+            "request": "launch",
+            "mainClass": "practice.app3_1",
+            "projectName": "cloudapplication_606917fb"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)",
+            "request": "launch",
+            "mainClass": "com.example.Main",
+            "projectName": "project-name",
+            "cwd": "${fileDirname}",
+            "console": "internalConsole"
+        },
+        {
+            "type": "java",
             "name": "App_array",
             "request": "launch",
             "mainClass": "practice.App_array",
             "projectName": "cloudapplication_701c7288"
->>>>>>> 3f0446913d720c57b10a60c80c6e8e83b5bf7527
-        },
-        {
-            "type": "java",
-            "name": "app3_1",
-            "request": "launch",
-            "mainClass": "practice.app3_1",
-<<<<<<< HEAD
-            "projectName": ""
-        },
-        {
-            "type": "java",
-            "name": "app3_1",
-            "request": "launch",
-            "mainClass": "app3_1",
-            "projectName": "cloudapplication_606917fb"
-=======
-            "projectName": "cloudapplication_701c7288"
->>>>>>> 3f0446913d720c57b10a60c80c6e8e83b5bf7527
         },
         {
             "name": "Listen for Xdebug",
