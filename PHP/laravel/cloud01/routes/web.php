@@ -31,7 +31,7 @@ Route::get('form', [FormControllerTest::class, "showform"])->name('showform');
 Route::post('form', [FormControllerTest::class, "showform"])->name('submitform');
 
 Route::get("/member/add", [MemberController::class, "add"]);
-Route::get("/member/delete", [MemberController::class, "delete"]);
+Route::get("/member/delete/{userid}", [MemberController::class, "delete"])->name('memberDelete');
 Route::get("/member/list", [MemberController::class, "list"]);
 //此POST是view.admin.member.add表單用的action
 Route::post("/member/insert", [MemberController::class, "insert"]);

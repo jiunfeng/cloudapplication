@@ -11,6 +11,7 @@ class Member extends Model
     //Laravel 會自動檢查(或增加)資料表兩個時間欄位create_at及updated_at
     //$timestamps=false;表示不要使用這兩個欄位
     public $timestamps = false;
+    protected $primaryKey = 'userid';
 
     //資料表名稱
     protected $table = "member";

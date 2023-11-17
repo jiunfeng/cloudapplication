@@ -40,8 +40,11 @@ class MemberController extends Controller
     }
 
     //刪除資料
-    public function delete()
+    public function delete($userid)
     {
-        return view("admin.member.delete");
+        $member = Member::where('userid', $userid)->first();
+        $member->delete();
+        echo $member;
+        //return view("admin.member.delete");
     }
 }

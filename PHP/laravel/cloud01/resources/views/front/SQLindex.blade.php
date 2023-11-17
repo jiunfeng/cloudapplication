@@ -4,62 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css導入 -->
     <link rel="stylesheet" type="text/css" href="/css/form.css">
     <!-- 引入 SweetAlert2 样式 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
 
-    <!--     <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
 
-        .button-container {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 20px;
-            /* 增加底部間距 */
-        }
-
-        button,
-        a {
-            padding: 10px;
-            font-size: 14px;
-            cursor: pointer;
-            text-decoration: none;
-            /* 移除連結的下劃線 */
-            color: #fff;
-            background-color: #007bff;
-            border: 1px solid #007bff;
-            border-radius: 5px;
-        }
-
-        table {
-            border-collapse: collapse;
-            width: 80%;
-            /* 調整表格寬度 */
-        }
-
-        th,
-        td {
-            border: 2px solid #000;
-            padding: 8px;
-            text-align: center;
-        }
-
-        th {
-            background-color: #f2f2f2;
-        }
-    </style> -->
     <title>table</title>
 
 </head>
-
-
-
 
 <body>
 
@@ -79,8 +32,6 @@
                 <th>City</th>
                 <th>Address</th>
                 <th></th>
-
-
             </tr>
         </thead>
         <tbody>
@@ -95,7 +46,7 @@
                 <td class="text-center">{{$data->address}}</td>
                 <td>
                     <div class="button-container" style="margin-bottom: 10px;">
-                        <a href="/member/delete" role="button">刪除</a>
+                        <button onclick="deleteMember({{$data}})">刪除</button>
                         <a href="/member/update" role="button">修改</a>
                     </div>
                 </td>
@@ -115,6 +66,33 @@
                 icon: 'success',
                 title: 'Custom Alert',
                 text: '111This is a custom alert message!'
+            });
+        }
+
+        function deleteMember(userData) {
+            Swal.fire({
+                title: '確認刪除？',
+                //! html 這邊使用是為了能夠使用<br>這類html語法如果不需要則可以直接用 text:顯示單純文字
+                //-同時如果要引用變數 不可以用分號' 要使用`才可以順利引用
+                //-如果要用text就變成        text: userData.username + '5555',
+                html: `ID:${userData.userid}<br>Name:${userData.username}<br><span style="color:red; font-weight:bold;">刪除後將無法還原!</span>`,
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: '確認刪除',
+                cancelButtonText: '取消',
+
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // 使用者點擊 "確認刪除"
+                    // 在執行實際的刪除操作使用ajax呼叫路由並傳userid過去
+                    location.href = "member/delete/" + userData.userid;
+
+                } else if (result.dismiss === Swal.DismissReason.cancel) {
+                    // 使用者點擊 "取消"
+                    console.log('取消刪除');
+                }
             });
         }
     </script>
