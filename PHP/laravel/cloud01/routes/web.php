@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\Member\MemberController;
 use App\Http\Controllers\FormControllerTest;
 use App\Http\Controllers\Front\IndexController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\File;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,14 +20,22 @@ use Illuminate\Support\Facades\Route;
 //Route::get('/', [IndexController::class, "indexFirst"]); 連到這個站台的時候/ 直接對應到的方法
 Route::get('/', [IndexController::class, "indexFirst"]);
 Route::get('/table', [IndexController::class, "SQLindex"]);
+/* Route::get('/form.css', function () {
+    $path = resource_path("../resources/views/front/form.css");
+
+    return response()->file($path);
+}); */
 
 //測試表單
 Route::get('form', [FormControllerTest::class, "showform"])->name('showform');
 Route::post('form', [FormControllerTest::class, "showform"])->name('submitform');
 
 Route::get("/member/add", [MemberController::class, "add"]);
-Route::post("/member/insert", [MemberController::class, "insert"]);
+Route::get("/member/delete", [MemberController::class, "delete"]);
 Route::get("/member/list", [MemberController::class, "list"]);
+//此POST是view.admin.member.add表單用的action
+Route::post("/member/insert", [MemberController::class, "insert"]);
+
 
 //創建laravel專案自動產生的內容
 /* Route::get('/', function () {

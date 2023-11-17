@@ -21,6 +21,6 @@ class IndexController extends Controller
     public function indexFirst()
     {
         //echo ("laravel index");
-        return view("front.home");
+        return view("welcome");
     }
 }

@@ -34,4 +34,23 @@ class Member extends Model
         $list = self::paginate(10);
         return $list;
     }
+
+
+
+    //取個人資料範例
+    public function gerMember($userID)
+    {
+        /* 
+    簡單方式
+    需要先引入 use DB
+    $member = DB::table("member")->where("userId",$userId)->first()
+    
+    也可以
+    $member = DB::select("SELECT * FROM member WHERE userID=?,[$userID]);
+    
+    */
+
+        $member = self::where("userID", $userID)->first();
+        return $member;
+    }
 }

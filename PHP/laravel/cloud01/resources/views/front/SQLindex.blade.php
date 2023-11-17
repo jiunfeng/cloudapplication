@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/form.css">
     <!-- 引入 SweetAlert2 样式 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
 
-
-    <style>
+    <!--     <style>
         body {
             display: flex;
             flex-direction: column;
@@ -53,7 +53,7 @@
         th {
             background-color: #f2f2f2;
         }
-    </style>
+    </style> -->
     <title>table</title>
 
 </head>
@@ -65,7 +65,8 @@
 
     <div class="button-container">
         <a href="/member/add" role="button">新增</a>
-        <button onclick="deleteRow()">刪除</button>
+        <a href="/member/delete" role="button">刪除</a>
+        <!-- <button onclick="deleteRow()">刪除</button> -->
         <button onclick="editRow()">修改</button>
     </div>
     <table>
@@ -77,6 +78,8 @@
                 <th>Email</th>
                 <th>City</th>
                 <th>Address</th>
+                <th></th>
+
 
             </tr>
         </thead>
@@ -90,6 +93,12 @@
                 <td class="text-center">{{$data->city}}</td>
 
                 <td class="text-center">{{$data->address}}</td>
+                <td>
+                    <div class="button-container" style="margin-bottom: 10px;">
+                        <a href="/member/delete" role="button">刪除</a>
+                        <a href="/member/update" role="button">修改</a>
+                    </div>
+                </td>
             </tr>
             @endforeach
         </tbody>
@@ -105,7 +114,7 @@
             Swal.fire({
                 icon: 'success',
                 title: 'Custom Alert',
-                text: 'This is a custom alert message!'
+                text: '111This is a custom alert message!'
             });
         }
     </script>
