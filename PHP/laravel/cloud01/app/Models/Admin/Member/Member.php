@@ -4,6 +4,7 @@ namespace App\Models\Admin\Member;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use DB; //config/app 內有完整路徑這邊是取別名
 
 class Member extends Model
 {
@@ -32,14 +33,17 @@ class Member extends Model
         //first():取第一筆資料
         //paginate:分頁 paginate(5) 表示每5筆資料表示一頁
 
-        $list = self::paginate(10);
+        //$list = self::paginate(10);
+        $list = DB::table('member AS a')->selectRaw('a.*,b.categoryName')->leftjoin('category AS b', 'a.category', 'b.categoryId')->paginate(10);
+        // $list = DB::table("member AS a")->selectRaw("a.*,b.city")->leftjoin("city AS b", "a.city", "b.id")->paginate(10);
+        // 若有別的表單要組合要這樣使用
         return $list;
     }
 
 
 
     //取個人資料範例
-    public function gerMember($userID)
+    public function getMember($userID)
     {
         /* 
     簡單方式

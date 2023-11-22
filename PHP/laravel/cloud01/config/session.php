@@ -31,8 +31,9 @@ return [
     |
     */
 
-    'lifetime' => env('SESSION_LIFETIME', 120),
+    'lifetime' => env('SESSION_LIFETIME', 120), //分鐘120分，頁面多久沒有跳轉就刪除session
 
+    //true 瀏覽器關閉就刪 false打開就還可以用 一般來說會用true比較安全
     'expire_on_close' => false,
 
     /*
@@ -128,7 +129,7 @@ return [
 
     'cookie' => env(
         'SESSION_COOKIE',
-        Str::slug(env('APP_NAME', 'laravel'), '_').'_session'
+        Str::slug(env('APP_NAME', 'laravel'), '_') . '_session'
     ),
 
     /*

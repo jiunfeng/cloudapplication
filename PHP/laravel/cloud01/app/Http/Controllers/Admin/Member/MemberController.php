@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin\Member;
 
 use App\Http\Controllers\Controller;
 use App\Models\Admin\Member\Member;
+use App\Models\Admin\Member\City;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 
@@ -45,6 +46,6 @@ class MemberController extends Controller
         $member = Member::where('userid', $userid)->first();
         $member->delete();
         echo $member;
-        //return view("admin.member.delete");
+        return redirect("/table");
     }
 }

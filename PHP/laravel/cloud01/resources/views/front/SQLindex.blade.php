@@ -46,7 +46,8 @@
                 <td class="text-center">{{$data->address}}</td>
                 <td>
                     <div class="button-container" style="margin-bottom: 10px;">
-                        <button onclick="deleteMember({{$data}})">刪除</button>
+                        <button onclick="deleteMember({{$data->userid}})">刪除</button>
+                        <!-- // TODO:如果用$data 原先單一資料表正常但如果做過join會錯誤需要在$data指定userid過去 -->
                         <a href="/member/update" role="button">修改</a>
                     </div>
                 </td>
@@ -55,6 +56,8 @@
         </tbody>
 
     </table>
+    {{ $list->links() }}
+    //要在app/Providers/AppServiceProvider加入boorstamp使用
 
     <!-- 引入 SweetAlert2 脚本 -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -120,6 +123,14 @@
 
     <!-- 调用 showAlert 函数，例如在按钮点击事件中 -->
     <button onclick="showAlert()">Show Alert</button>
+
+    <!-- 分頁 -->
+    <br><br><br>
+
+
+
+
+
 
 </body>
 

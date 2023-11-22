@@ -11,7 +11,9 @@ class IndexController extends Controller
     public function SQLindex()
     {
         //Member::all()取得member資料表中所有資料
-        $list = Member::all();
+        //$list = Member::all();
+        $member = new Member();
+        $list = $member->getList(); //分頁方法
 
         //compact:將資料傳送到view網頁
         //compact("list"):要注意是list不是$list
