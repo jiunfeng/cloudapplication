@@ -43,7 +43,8 @@
     <h2>Add New Entry</h2>
 
     <form action="/member/insert" method="post">
-        @csrf <!-- Laravel CSRF token -->
+        @csrf
+        <!-- Laravel CSRF token -->
         <label for="id">ID:</label>
         <input type="text" id="id" name="id" required>
 

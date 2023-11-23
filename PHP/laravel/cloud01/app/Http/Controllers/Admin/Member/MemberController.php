@@ -3,8 +3,8 @@
 namespace App\Http\Controllers\Admin\Member;
 
 use App\Http\Controllers\Controller;
+use App\Models\Admin\Member\Category;
 use App\Models\Admin\Member\Member;
-use App\Models\Admin\Member\City;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 
@@ -47,5 +47,31 @@ class MemberController extends Controller
         $member->delete();
         echo $member;
         return redirect("/table");
+    }
+
+    //修改資料
+    public function edit($userid)
+    {
+
+        $member = Member::where('userid', $userid)->first();
+        $category = Category::all();
+        //dd($category->all());
+        //dd($member->all());
+        return view("admin.member.edit", compact("member", "category"));
+    }
+
+    public function update(Request $req)
+    {
+        $member = new Member();
+        $member = Member::where('userid', $req->id)->first();
+        $member->userid = $req->id;
+        $member->username = $req->name;
+        $member->mobile = $req->mobile;
+        $member->email = $req->email;
+        $member->city = $req->city;
+        $member->address = $req->address;
+        $member->category = $req->category;
+        $member->save();
+        //TODO 還沒寫檢查
     }
 }

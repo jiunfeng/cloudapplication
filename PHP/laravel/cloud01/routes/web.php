@@ -44,6 +44,8 @@ Route::group(["middleware" => "manager"], function () {
     Route::get("/admin/home", [AdminController::class, "home"]);
     //此POST是view.admin.member.add表單用的action
     Route::post("/member/insert", [MemberController::class, "insert"]);
+    Route::get("/member/edit/{userid}", [MemberController::class, "edit"]);
+    Route::post("/member/update", [MemberController::class, "update"]);
 });
 
 //Route::group(["middleware"=>"manager","prefix"=>"member"],function(){XXXXXXX}) 群組起來就都要有session才可以動作

@@ -48,7 +48,7 @@
                     <div class="button-container" style="margin-bottom: 10px;">
                         <button onclick="deleteMember({{$data->userid}})">刪除</button>
                         <!-- // TODO:如果用$data 原先單一資料表正常但如果做過join會錯誤需要在$data指定userid過去 -->
-                        <a href="/member/update" role="button">修改</a>
+                        <a href="/member/edit/{{$data->userid}}" role="button">修改</a>
                     </div>
                 </td>
             </tr>
@@ -57,7 +57,7 @@
 
     </table>
     {{ $list->links() }}
-    //要在app/Providers/AppServiceProvider加入boorstamp使用
+    <!-- 要在app/Providers/AppServiceProvider加入boorstamp使用 -->
 
     <!-- 引入 SweetAlert2 脚本 -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -73,6 +73,7 @@
         }
 
         function deleteMember(userData) {
+
             Swal.fire({
                 title: '確認刪除？',
                 //! html 這邊使用是為了能夠使用<br>這類html語法如果不需要則可以直接用 text:顯示單純文字
@@ -90,7 +91,7 @@
                 if (result.isConfirmed) {
                     // 使用者點擊 "確認刪除"
                     // 在執行實際的刪除操作使用ajax呼叫路由並傳userid過去
-                    location.href = "member/delete/" + userData.userid;
+                    location.href = "member/delete/" + userData;
 
                 } else if (result.dismiss === Swal.DismissReason.cancel) {
                     // 使用者點擊 "取消"
