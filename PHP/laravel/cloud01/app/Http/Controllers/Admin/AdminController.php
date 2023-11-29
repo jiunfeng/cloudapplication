@@ -11,8 +11,9 @@ class AdminController extends Controller
     //驗證
     public function login()
     {
-        //後台登入夜面
-        return view("admin.login");
+        //後台登入頁面
+        //有login與login2兩個版本可以使用
+        return view("admin.login2");
     }
 
     //後台登入檢查帳密
@@ -42,6 +43,6 @@ class AdminController extends Controller
     //跳回後台首頁
     public function home()
     {
-        return view("admin.home");
+        return view("admin.app2");
     }
 }

@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\File;
 */
 //如果是表格要用post '/' 表示根目錄 然後要執行IndexController這支程式的 indexFirst這個方法 /是可以改的變成你想要的url
 //Route::get('/', [IndexController::class, "indexFirst"]); 連到這個站台的時候/ 直接對應到的方法
-Route::get('/', [IndexController::class, "indexFirst"]);
+Route::get('/', [IndexController::class, "index"]);
 
 /* Route::get('/form.css', function () {
     $path = resource_path("../resources/views/front/form.css");
@@ -33,7 +33,7 @@ Route::post('form', [FormControllerTest::class, "showform"])->name('submitform')
 
 
 //後台管理系統
-Route::get("/admin", [AdminController::class, "login"])->name('login');
+Route::get("/admin", [AdminController::class, "login"]);
 Route::post("doLogin", [AdminController::class, "doLogin"]);
 
 Route::group(["middleware" => "manager"], function () {

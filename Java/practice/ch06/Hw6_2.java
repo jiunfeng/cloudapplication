@@ -25,6 +25,37 @@
 
 package practice.ch06;
 
-public class Hw6_2 {
+import java.util.Arrays;
 
+public class Hw6_2 {
+    public static void main(String[] args) {
+        int array[][] = { { 83, 68, 79 }, { 90, 88, 93 }, { 76, 92, 67 }, { 83, 60, 91 } };
+        // JDK8的用法可以用lambda及steam實現，印出二維陣列的內容
+        for (int i = 0; i < array.length; i++) {
+            Arrays.stream(array[i]).forEach(element -> System.out.println(element + " "));
+        }
+        // for (int i = 0; i < array.length; i++) {
+        // System.out.println(array[i]);
+        // for (int ii = 0; ii < array[i].length; ii++) {
+        // System.out.println(array[i][ii]);
+        // }
+        // }
+
+        for (int i = 0; i < array.length; i++) {
+            int sum1[] = { 0 };
+            Arrays.stream(array[i]).forEach(element -> sum1[0] += element);
+            float average = (float) sum1[0] / 3;
+            System.out.println("平均分數為" + average);
+        }
+
+        for (int i = 0; i < array[0].length; i++) {
+            int sum = 0;
+            for (int ii = 0; ii < array.length; ii++) {
+                sum += array[ii][i];
+            }
+
+            System.out.println("各科成績平均" + sum / 4);
+        }
+
+    }
 }

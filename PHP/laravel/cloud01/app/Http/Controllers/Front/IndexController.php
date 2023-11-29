@@ -20,9 +20,14 @@ class IndexController extends Controller
         //list 這邊$list是宣告了list這個變數並將 member中的資料全部丟進去，再用compact將他傳到網頁
         return view("front.SQLindex", compact("list"));
     }
-    public function indexFirst()
+    // public function indexFirst()
+    // {
+    //     //echo ("laravel index");
+    //     return view("welcome");
+    // }
+
+    public function index()
     {
-        //echo ("laravel index");
-        return view("welcome");
+        return view("front.layout");
     }
 }

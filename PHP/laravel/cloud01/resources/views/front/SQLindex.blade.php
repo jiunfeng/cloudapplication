@@ -1,3 +1,6 @@
+@extends("admin.app2")
+@section("title","會員列表")
+@section("context")
 <!DOCTYPE html>
 <html lang="en">
 
@@ -138,3 +141,4 @@
 
 
 </html>
+@section("context")

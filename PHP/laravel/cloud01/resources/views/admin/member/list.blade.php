@@ -83,7 +83,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- 引入 Bootstrap 的 CSS 文件 -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> -->
     <title>Member List</title>
 </head>
 
@@ -117,6 +117,7 @@
         <!-- 分頁 -->
         <div class="d-flex justify-content-center">
             {{ $list->links() }}
+            <!-- app\Providers\AppServiceProvider.php 需要加入usebootstrap -->
         </div>
     </div>
 
