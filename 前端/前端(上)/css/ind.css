@@ -1,0 +1,107 @@
+body {
+    background-color: var(--mc01);
+    /* 調整邊框 可以從F12看間距 */
+    margin-top: 0px;
+    padding: 15px;
+}
+
+.wrapper {
+    /* 如果有設定width 圖片大也會被壓到 這個範圍內ex.下方1400*200圖片 */
+    width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+
+}
+
+nav {
+    background-color: var(--mc02);
+    /* 字體位置 */
+    text-align: center;
+}
+
+nav ul {
+    /* > 不是很理解 */
+    display: inline-block;
+}
+
+nav ul li {
+    /* 移除li標記 */
+    list-style-type: none;
+    float: left;
+}
+
+nav ul li a {
+    display: block;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-right: 5px;
+    margin-top: 15px;
+    background-color: var(--mc03);
+    text-decoration: none;
+    color: var(--mc04);
+
+}
+
+nav ul li a:hover {
+    background-color: var(--mc03);
+}
+
+.content_text {
+    margin-top: 5px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: var(--mc02);
+}
+
+.content_text p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.content_text a:hover {
+    background-color: var(--mc04);
+    color: var(--mc01);
+}
+
+.content_text a {
+    display: block;
+    width: 100px;
+    height: 30px;
+    background-color: var(--mc01);
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    /* 刪除下畫線因為大部分文本超連結都會出現下畫線 */
+    text-decoration: none;
+    color: black;
+    /* 格子內元素垂直置中 並且需要跟你設定的高度相同 */
+    line-height: 30px;
+
+}
+
+.footer {
+    background-color: var(--mc02);
+    text-align: center;
+
+}
+
+.footer p {
+    color: var(--mc01);
+
+}
+
+/* 表示上限到1024 實際上是小於1024才可以使用 */
+@media screen and (max-width: 1024px) {
+    .wrapper {
+        width: 100%;
+
+    }
+}

@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* 配色表通常從美術來設定好做為變數可以引用 root為最上層*/
+:root {
+    --mc01: #F3CDA9;
+    --mc02: #EE592E;
+    --mc03: #774836;
+    --mc04: #537479;
+}
+
+
+body {
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+.fw-900 {
+    font-weight: 900;
+}
+
+.fw-800 {
+    font-weight: 800;
+}
+
+.fw-700 {
+    font-weight: 700;
+}
+
+.fw-600 {
+    font-weight: 600;
+}
+
+.fw-500 {
+    font-weight: 500;
+}
+
+.fw-400 {
+    font-weight: 400;
+}
+
+.fw-300 {
+    font-weight: 300;
+}
+
+.fw-200 {
+    font-weight: 200;
+}
+
+.fw-100 {
+    font-weight: 100;
+}

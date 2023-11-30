@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta http-equiv="X-UA-Compatible" content="ie=edge, chrome=1">
     <meta name="description" content="專案">
-    <link rel="preload" as="script" href="js/script.min.js">
-    <link rel="preload" as="style" href="css/layput.min.css">
+    <link rel="preload" as="script" href="js/front/script.min.js">
+    <link rel="preload" as="style" href="css/front/layput.min.css">
     <link rel="preload" as="image" href="images/map.svg">
-    <link rel="stylesheet" type="text/css" href="css/index.min.css">
-    <link rel="stylesheet" type="text/css" href="css/menu.min.css">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/layout.min.css">
+    <link rel="stylesheet" type="text/css" href="css/front/index.min.css">
+    <link rel="stylesheet" type="text/css" href="css/front/menu.min.css">
+    <link rel="stylesheet" type="text/css" href="css/front/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/front/layout.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
@@ -35,11 +35,14 @@
     </div>
     <!--loading-->
     <div id="page" class="bg-linear-primary pos-r container-fluid px-0">
-        <div class="pos-ab w-100 pos-ab-b pos-ab-t pos-ab-l bg-cover bgpos-x-center bgpos-y-right" style="background-image: url('images/map.png')"></div>
+        <div class="pos-ab w-100 pos-ab-b pos-ab-t pos-ab-l bg-cover bgpos-x-center bgpos-y-right"
+            style="background-image: url('images/map.png')"></div>
         <!--pos-ab-->
-        <div class="pos-ab w-100 pos-ab-b pos-ab-t pos-ab-l pos-ab-y-e" style="background-image: url('images/world-view.png');"></div>
+        <div class="pos-ab w-100 pos-ab-b pos-ab-t pos-ab-l pos-ab-y-e"
+            style="background-image: url('images/world-view.png');"></div>
         <!--pos-ab-->
-        <div class="pos-ab w-100 h-100 pos-ab-t pos-ab-l pos-ab-y-s " style="background-image: url('images/idx-bg-top.png')"></div>
+        <div class="pos-ab w-100 h-100 pos-ab-t pos-ab-l pos-ab-y-s "
+            style="background-image: url('images/idx-bg-top.png')"></div>
         <!--pos-ab-->
         <input type="checkbox" id="m-ctrl" hidden>
         <header class="">
@@ -86,9 +89,9 @@
     </div>
     <!--page-->
 
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.js"></script>
-    <script src="js/script.min.js"></script>
+    <script src="js/front/jquery.js"></script>
+    <script src="js/front/bootstrap.js"></script>
+    <script src="js/front/script.min.js"></script>
 </body>
 
 </html>
