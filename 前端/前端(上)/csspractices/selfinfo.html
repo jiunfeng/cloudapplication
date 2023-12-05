@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/allfront.css">
+
+    <title>Document</title>
+</head>
+<style>
+    .section01 {
+        background-color: var(--mc01);
+        height: 100vh;
+        /* 定位用 relative 相對他應該要有的位置進行布局 */
+        position: relative;
+    }
+
+    .section01 .box01 {
+        background-color: var(--mc02);
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .section01 .box02 {
+        background-color: var(--mc03);
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .section01 .box03 {
+        background-color: var(--mc04);
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+
+    .section01 .box04 {
+        background-color: var(--mc05);
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+
+    .section01 .logoing {
+        background-color: var(--mc06);
+        position: absolute;
+        top: 30px;
+        bottom: 30px;
+        left: 30px;
+        right: 30px;
+        /* 將圖片放入作為背景放入 以下三個樣式是基本用法*/
+        background-image: url(https://images.unsplash.com/photo-1701001512072-3a232c906443?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+        /* 圖片對中心點 */
+        background-position: center center;
+        background-size: cover;
+        /* 視覺上讓圖片停留 */
+        background-attachment: fixed;
+    }
+
+    .section01 .user_text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        /* 在position下將元素放到正中央的方法原先left50%轉換了相對50%回來實際就是25% */
+        transform: translateX(-50%);
+        text-align: center;
+        /* 透過讓背景有透明度的方式讓字的顏色就算跟背景圖混再一起也不會整個糊在一起 */
+        background-color: var(--mc07);
+        padding: 20px;
+        /* 四邊圓角
+        设置四个角的相同的圆角半径
+        element {
+        border-radius: 10px;
+        }
+
+        设置水平方向和垂直方向的圆角半径分别为10px和20px
+        element {
+        border-radius: 10px 20px;
+        }
+
+        设置四个角的圆角半径分别为10px、20px、30px和40px
+        element {
+        border-radius: 10px 20px 30px 40px;
+        }
+
+        设置每个角的圆角半径，顺序为左上、右上、右下、左下
+        element {
+        border-radius: 10px 20px 30px 40px;
+        詳細用法
+        element {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 30px;
+        border-bottom-left-radius: 40px;
+        }
+        }*/
+        border-radius: 20px 0 0 0;
+        /* 陰影 box-shadow: [水平偏移量] [垂直偏移量] [模糊半径] [阴影扩展半径] [阴影颜色] [内阴影];*/
+        box-shadow: 5px 10px 6px 10px #888888;
+
+    }
+
+    .section01 .user_text p {
+        color: var(--mc01);
+        font-size: 900;
+    }
+
+    .section02 {
+        position: relative;
+        height: 360px;
+        margin-top: 15px;
+    }
+
+    .section02 .section02_box01 {
+        position: absolute;
+        background-color: var(--mc05);
+        width: 300px;
+        height: 300px;
+        left: 10%;
+        text-align: center;
+        line-height: 300px;
+        background-image: url("https://fakeimg.pl/200x100/");
+        border-radius: 50%;
+        box-shadow: -10px 10px 20px 2px var(--mc04);
+    }
+
+    .section02 .section02_box01 a {
+        text-decoration: none;
+        font-size: 36px;
+        font-weight: 900;
+        color: var(--mc06);
+    }
+
+    .section02 .section02_box02 {
+        position: absolute;
+        background-color: var(--mc05);
+        width: 300px;
+        height: 300px;
+        left: 40%;
+        text-align: center;
+        line-height: 300px;
+        background-image: url("https://fakeimg.pl/200x100/");
+        border-radius: 50%;
+        box-shadow: -10px 10px 20px 2px var(--mc04);
+    }
+
+    .section02 .section02_box02 a {
+        text-decoration: none;
+        font-size: 36px;
+        font-weight: 900;
+        color: var(--mc06);
+    }
+
+    .section02 .section02_box03 {
+        position: absolute;
+        background-color: var(--mc05);
+        width: 300px;
+        height: 300px;
+        left: 70%;
+        text-align: center;
+        line-height: 300px;
+        background-image: url("https://fakeimg.pl/200x100/");
+        border-radius: 50%;
+        box-shadow: -10px 10px 20px 2px var(--mc04);
+    }
+
+    .section02 .section02_box03 a {
+        text-decoration: none;
+        font-size: 36px;
+        font-weight: 900;
+        color: var(--mc06);
+    }
+
+    @media screen and (max-width: 1024px) {
+
+        /* 瀏覽器版面變小時改變section02高度讓他能布局box */
+        .section02 {
+            height: 1300px;
+        }
+
+        .section02 .section02_box01 {
+            top: 5%;
+        }
+
+        .section02 .section02_box02 {
+            top: 35%;
+            left: 10%;
+        }
+
+        .section02 .section02_box03 {
+            top: 65%;
+            left: 10%;
+        }
+    }
+</style>
+
+<body>
+    <div class="section01">
+        <div class="box01"></div>
+        <div class="box02"></div>
+        <div class="box03"></div>
+        <div class="box04"></div>
+        <div class="logoing "></div>
+        <div class="user_text">
+            <H1>OOOOO</H1>
+            <hr>
+            <h2>QQQQQQ</h2>
+            <p></p>
+            <p>拍攝老大國產保護後悔說什麼管理原則連載權力微微基隆購物，裝飾基本上真正排行，公司求購，意見輕鬆東京技術主席還沒消息信譽彩色往往，鍵盤版主我有等級無關正常破壞，曝光外觀裝修如下團體天天，給我注意到處韓。</p>
+        </div>
+    </div>
+    <div class="section02">
+        <div class="section02_box01 bg_cover"><a href="#">作品一</a></div>
+        <div class="section02_box02 bg_cover"><a href="#">作品二</a></div>
+        <div class="section02_box03 bg_cover"><a href="#">作品三</a></div>
+    </div>
+</body>
+
+</html>

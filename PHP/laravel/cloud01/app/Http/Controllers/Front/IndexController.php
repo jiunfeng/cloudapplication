@@ -30,4 +30,17 @@ class IndexController extends Controller
     {
         return view("front.layout");
     }
+
+    public function testweb()
+    {
+        return view("testweb");
+    }
+    public function sectionindex()
+    {
+        return view("sectiondemo.content");
+    }
+    public function listtest()
+    {
+        return view("front.qa.list");
+    }
 }

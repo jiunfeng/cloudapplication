@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\Member\MemberController;
+use App\Http\Controllers\Admin\Qa\AdminQaController;
 use App\Http\Controllers\FormControllerTest;
 use App\Http\Controllers\Front\IndexController;
 use Illuminate\Support\Facades\Route;
@@ -48,9 +49,32 @@ Route::group(["middleware" => "manager"], function () {
     Route::post("/member/update", [MemberController::class, "update"]);
 });
 
+Route::get("/testweb", [IndexController::class, "testweb"]);
+
+Route::get("sectionindex", [IndexController::class, "sectionindex"]);
+Route::get("/listqa", [IndexController::class, "listtest"]);
 //Route::group(["middleware"=>"manager","prefix"=>"member"],function(){XXXXXXX}) 群組起來就都要有session才可以動作
 //創建laravel專案自動產生的內容
 /* Route::get('/', function () {
     return view('welcome');
 });
  */
+
+
+//後台QA管理 middleware為 manager 需登入後台才可操作
+//middlewate(manager)需再 app/Http/Kernel.php中註冊
+//prefix:前置詞 可以放在["middleware" => "manager",prefix => admi/qa] 這個group 就會自動有前綴例如 admi/qa/listqasql
+Route::group(["middleware" => "manager"], function () {
+    //列表
+    Route::get("/listqasql", [AdminQaController::class, "qaList"]);
+    //新增
+    Route::get("/listqasql_add", [AdminQaController::class, "add"]);
+    //儲存新增
+    Route::post("/listqasql_insert", [AdminQaController::class, "insert"]);
+    //修改編輯參數為id
+    Route::get("/listqasql_edit/{id}", [AdminQaController::class, "edit"]);
+    //儲存變更
+    Route::post("/listqasql_update", [AdminQaController::class, "update"]);
+    //刪除
+    Route::post("/listqasql_delete", [AdminQaController::class, "delete"]);
+});

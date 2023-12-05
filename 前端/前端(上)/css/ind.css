@@ -48,6 +48,7 @@ nav ul li a {
 
 nav ul li a:hover {
     background-color: var(--mc03);
+    color: var(--textcolor01);
 }
 
 .content_text {
@@ -64,6 +65,7 @@ nav ul li a:hover {
     margin-bottom: 30px;
 }
 
+/* 懸停的時候顯示的樣式 */
 .content_text a:hover {
     background-color: var(--mc04);
     color: var(--mc01);

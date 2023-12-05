@@ -5,12 +5,21 @@
     --mc01: #F3CDA9;
     --mc02: #EE592E;
     --mc03: #774836;
-    --mc04: #537479;
+    --mc04: #3e686e;
+    --mc05: #2ba85b;
+    --mc06: #643e6f;
+    --mc07: rgba(0, 0, 0, 0.171);
+    --textcolor01: #2ba85b;
+    --textcolor03: rgb(15, 17, 173);
 }
 
 
 body {
     font-family: 'Noto Sans TC', sans-serif;
+}
+
+.textcolor01 {
+    color: var(--textcolor03);
 }
 
 .fw-900 {
@@ -47,4 +56,9 @@ body {
 
 .fw-100 {
     font-weight: 100;
+}
+
+.bg_cover {
+    background-position: center center;
+    background-size: cover;
 }
