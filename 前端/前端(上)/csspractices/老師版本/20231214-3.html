@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ch7. flex</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/myall.css">
+    <style>
+        .box{
+            height: 160px;
+            text-align: center;
+            border: 2px solid var(--mycolor02);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="display-3 fw-900">1.flex-row</div>
+        <div class="row d-flex flex-row">
+            <div class="col-3">
+                <div class="box bg-success"><h1>1</h1></div>
+            </div>
+            <div class="col-3">
+                <div class="box bg-success"><h1>2</h1></div>
+            </div>
+            <div class="col-3">
+                <div class="box bg-success"><h1>3</h1></div>
+            </div>
+        </div>
+
+        <div class="display-3 fw-900">2. flex-row-reverse</div>
+        <div class="row d-flex flex-row-reverse">
+            <div class="col-3">
+                <div class="box bg-success"><h1>1</h1></div>
+            </div>
+            <div class="col-3">
+                <div class="box bg-success"><h1>2</h1></div>
+            </div>
+            <div class="col-3">
+                <div class="box bg-success"><h1>3</h1></div>
+            </div>
+        </div>
+
+        <div class="display-3 fw-900">3.flex-column(垂直)</div>
+        <div class="row flex-column">
+            <div class="col-3">
+                <div class="box bg-success"><h1>1</h1></div>
+            </div>
+            <div class="col-3">
+                <div class="box bg-success"><h1>2</h1></div>
+            </div>
+            <div class="col-3">
+                <div class="box bg-success"><h1>3</h1></div>
+            </div>
+        </div>
+
+        <div class="display-3 fw-900">4.flex-column-reverse(垂直反轉)</div>
+        <div class="row flex-column-reverse">
+            <div class="col-3">
+                <div class="box bg-success"><h1>1</h1></div>
+            </div>
+            <div class="col-3">
+                <div class="box bg-success"><h1>2</h1></div>
+            </div>
+            <div class="col-3">
+                <div class="box bg-success"><h1>3</h1></div>
+            </div>
+        </div>
+
+        <div class="display-3 fw-900">5. justify-content-start</div>
+        <div class="row justify-content-start">
+            <div class="col-2">
+                <div class="box bg-success"><h1>1</h1></div>
+            </div>
+            <div class="col-2">
+                <div class="box bg-success"><h1>2</h1></div>
+            </div>
+            <div class="col-2">
+                <div class="box bg-success"><h1>3</h1></div>
+            </div>
+        </div>
+
+        <div class="display-3 fw-900">6. justify-content-center</div>
+        <div class="row justify-content-center">
+            <div class="col-2">
+                <div class="box bg-success"><h1>1</h1></div>
+            </div>
+            <div class="col-2">
+                <div class="box bg-success"><h1>2</h1></div>
+            </div>
+            <div class="col-2">
+                <div class="box bg-success"><h1>3</h1></div>
+            </div>
+        </div>
+
+        <div class="display-3 fw-900">7. justify-content-end</div>
+        <div class="row justify-content-end">
+            <div class="col-2">
+                <div class="box bg-success"><h1>1</h1></div>
+            </div>
+            <div class="col-2">
+                <div class="box bg-success"><h1>2</h1></div>
+            </div>
+            <div class="col-2">
+                <div class="box bg-success"><h1>3</h1></div>
+            </div>
+        </div>
+
+        <div class="display-3 fw-900">8. justify-content-between</div>
+        <div class="row justify-content-between">
+            <div class="col-2">
+                <div class="box bg-success"><h1>1</h1></div>
+            </div>
+            <div class="col-2">
+                <div class="box bg-success"><h1>2</h1></div>
+            </div>
+            <div class="col-2">
+                <div class="box bg-success"><h1>3</h1></div>
+            </div>
+        </div>
+
+        <div class="display-3 fw-900">9. justify-content-around</div>
+        <div class="row justify-content-around">
+            <div class="col-2">
+                <div class="box bg-success"><h1>1</h1></div>
+            </div>
+            <div class="col-2">
+                <div class="box bg-success"><h1>2</h1></div>
+            </div>
+            <div class="col-2">
+                <div class="box bg-success"><h1>3</h1></div>
+            </div>
+        </div>
+
+        <div class="display-3 fw-900">10. align-items-start</div>
+        <div class="row flex-column align-items-start">
+            <div class="col-3">
+                <div class="box bg-warning"><h1>1</h1></div>
+            </div>
+            <div class="col-3">
+                <div class="box bg-warning"><h1>2</h1></div>
+            </div>
+            <div class="col-3">
+                <div class="box bg-warning"><h1>3</h1></div>
+            </div>
+        </div>
+
+        <div class="display-3 fw-900">11. align-items-center</div>
+        <div class="row flex-column align-items-center">
+            <div class="col-3">
+                <div class="box bg-warning"><h1>1</h1></div>
+            </div>
+            <div class="col-3">
+                <div class="box bg-warning"><h1>2</h1></div>
+            </div>
+            <div class="col-3">
+                <div class="box bg-warning"><h1>3</h1></div>
+            </div>
+        </div>
+
+        <div class="display-3 fw-900">12. align-items-end</div>
+        <div class="row flex-column align-items-end">
+            <div class="col-3">
+                <div class="box bg-warning"><h1>1</h1></div>
+            </div>
+            <div class="col-3">
+                <div class="box bg-warning"><h1>2</h1></div>
+            </div>
+            <div class="col-3">
+                <div class="box bg-warning"><h1>3</h1></div>
+            </div>
+        </div>
+
+        <div class="display-3 fw-900">13.align-self-start, center, end</div>
+        <div class="row flex-column align-items-center">
+            <div class="col-sm-3 align-self-start">
+                <div class="box bg-success"><h1>1</h1></div>
+            </div>
+            <div class="col-sm-3">
+                <div class="box bg-success"><h1>2</h1></div>
+            </div>
+            <div class="col-sm-3 align-self-end">
+                <div class="box bg-success"><h1>3</h1></div>
+            </div>
+            <div class="col-sm-3">
+                <div class="box bg-success"><h1>4</h1></div>
+            </div>
+            <div class="col-sm-3 align-self-start">
+                <div class="box bg-success"><h1>5</h1></div>
+            </div>
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
