@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ch6 欄與列練習</title>
+    <link rel="stylesheet" href="../bootstrap-5.3.2-dist/css/bootstrap.min.css">
+
+    <style>
+        .box {
+            height: 160px;
+            background-color: var(--mycolor01);
+            border: 2px solid var(--mycolor02);
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <p class="display-4 fw-900">1. 12欄位的排版</p>
+        <div class="row">
+            <div class="col-6 ">
+                <div class="box "></div>
+            </div>
+            <div class="col-6">
+                <div class="box"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3">
+                <div class="box"></div>
+            </div>
+            <div class="col-3">
+                <div class="box"></div>
+            </div>
+            <div class="col-3">
+                <div class="box"></div>
+            </div>
+            <div class="col-3">
+                <div class="box"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <div class="box"></div>
+            </div>
+            <div class="col-4">
+                <div class="box"></div>
+            </div>
+            <div class="col-4">
+                <div class="box"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2">
+                <div class="box"></div>
+            </div>
+            <div class="col-2">
+                <div class="box"></div>
+            </div>
+            <div class="col-2">
+                <div class="box"></div>
+            </div>
+            <div class="col-2">
+                <div class="box"></div>
+            </div>
+            <div class="col-2">
+                <div class="box"></div>
+            </div>
+            <div class="col-2">
+                <div class="box"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2">
+                <div class="box"></div>
+            </div>
+            <div class="col-10">
+                <div class="box"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3">
+                <div class="box bg-danger"></div>
+            </div>
+            <div class="col-9">
+                <div class="box bg-success"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <p class="display-4 fw-900">2. flex-12欄位的排版</p>
+        <div class="row">
+            <div class="col">
+                <div class="box"></div>
+            </div>
+            <div class="col">
+                <div class="box"></div>
+            </div>
+            <div class="col">
+                <div class="box"></div>
+            </div>
+            <div class="col">
+                <div class="box"></div>
+            </div>
+            <div class="col">
+                <div class="box"></div>
+            </div>
+            <div class="col">
+                <div class="box"></div>
+            </div>
+            <div class="col">
+                <div class="box"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container pb-5">
+        <p class="display-4 fw-900">3. 斷點(sm, md, lg, xl, xxl) - 12欄位的排版</p>
+        <div class="row">
+            <div class="col-md-6 col-lg-4 col-xl-3 col-xxl-2">
+                <div class="box"></div>
+            </div>
+            <div class="col-md-6 col-lg-4 col-xl-3 col-xxl-2">
+                <div class="box"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container pb-5">
+        <p class="display-4 fw-900">4. 推移 offset</p>
+        <div class="row">
+            <div class="col-lg-4 offset-lg-4">
+                <div class="box bg-danger"></div>
+            </div>
+        </div>
+        <p class="display-5 fw-900">畫面變大格子逐漸往右移動</p>
+        <div class="row">
+            <div class="col-2 offset-sm-2 offset-md-4 offset-lg-6 offset-xl-8 offset-xxl-10">
+                <div class="box bg-info"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container pb-5">
+        <p class="display-4 fw-900">5. gutter 間距</p>
+        <div class="row">
+            <div class="col-3">
+                <div class="box"></div>
+            </div>
+            <div class="col-3">
+                <div class="box"></div>
+            </div>
+        </div>
+        <div class="row gx-1">
+            <div class="col-3">
+                <div class="box"></div>
+            </div>
+            <div class="col-3">
+                <div class="box"></div>
+            </div>
+            <div class="col-3">
+                <div class="box"></div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ch5 table</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/myall.css">
+    <style>
+        @media screen and (max-width: 768px){
+            .table-rwd thead{
+                display: none;
+            }
+            .table-rwd tbody tr{
+                display: block;
+                border: 2px solid var(--mycolor04);
+                margin-top: 20px;
+            }
+            .table-rwd tbody tr td{
+                display: block;
+                overflow: hidden;
+            }
+            .table-rwd tbody tr td::before{
+                content: attr(data-th)" : ";
+                color: var(--textcolor03);
+                font-weight: 900;
+                display: block;
+                float: left;
+                width: 6em;
+                text-align: right;
+                padding-right: 1em;
+            }
+            .table-rwd tbody tr td span.table-col{
+                display: block;
+                float: left;
+                width: calc(100% - 6em);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <table class="table table-bordered table-hover table-sm border-success table-rwd">
+            <caption class="text-end">商品列表</caption>
+            <thead class="table-dark">
+                <tr>
+                    <th width="10%">商品編號</th>
+                    <th width="30%">商品圖片</th>
+                    <th width="10%">商品名稱</th>
+                    <th width="10%">商品數量</th>
+                    <th width="10%">商品價格</th>
+                    <th width="30%">商品備註</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-th="商品編號"><span class="table-col">001</span></td>
+                    <td data-th="商品圖片">
+                        <span class="table-col"><img src="https://fakeimg.pl/300x200/200" class="img-fluid"></span>
+                        
+                    </td>
+                    <td data-th="商品名稱"><span class="table-col">美式咖啡</span></td>
+                    <td data-th="商品數量"><span class="table-col">100</span></td>
+                    <td data-th="商品價格"><span class="table-col">45</span></td>
+                    <td data-th="商品備註"><span class="table-col">很好喝!!說是浙江態度主動一身那是比如很有極大取。 抓住每個人指出，漂亮航空就有權益，出現在工作看出站內會計特別奇蹟，不同不懂保留攝影收入從此，一方面。</span></td>
+                </tr>
+                <tr>
+                    <td>002</td>
+                    <td>
+                        <img src="https://fakeimg.pl/300x200/200" class="img-fluid">
+                    </td>
+                    <td>拿鐵咖啡</td>
+                    <td>100</td>
+                    <td>75</td>
+                    <td>很好喝!! 我很下列失望章節表面用戶電子郵件工資一句，教育活動社會維持第二章英語大多鎖定小學引進賓館，轉換為您。</td>
+                </tr>
+                <tr>
+                    <td>003</td>
+                    <td>
+                        <img src="https://fakeimg.pl/300x200/200" class="img-fluid">
+                    </td>
+                    <td>美式奶茶</td>
+                    <td>100</td>
+                    <td>85</td>
+                    <td>很好喝!! 順利商業領先，妹妹轉變無限值得，請在服飾春天效益英語貼。</td>
+                </tr>
+                <tr>
+                    <td>004</td>
+                    <td>
+                        <img src="https://fakeimg.pl/300x200/200" class="img-fluid">
+                    </td>
+                    <td>美式奶茶</td>
+                    <td>100</td>
+                    <td>85</td>
+                    <td>很好喝!!</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
