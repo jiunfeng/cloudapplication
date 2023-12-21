@@ -5,36 +5,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-    body {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        height: 100vh;
-        margin: 0;
-    }
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
 
-    form {
-        width: 10%;
-        /* 調整表單寬度 */
-    }
+        form {
+            width: 10%;
+            /* 調整表單寬度 */
+        }
 
-    label {
-        display: block;
-        margin-bottom: 8px;
-    }
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
 
-    input,
-    select {
-        width: 100%;
-        padding: 8px;
-        margin-bottom: 16px;
-    }
+        input,
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+        }
 
-    button {
-        padding: 10px;
-        font-size: 14px;
-        cursor: pointer;
-    }
+        button {
+            padding: 10px;
+            font-size: 14px;
+            cursor: pointer;
+        }
     </style>
     <title>Edit Entry</title>
 </head>
@@ -67,8 +67,8 @@
         <label for="category">Category:</label>
         <select name="category" id="category">
             @foreach ($category as $categoryItem)
-            <option value="{{ $categoryItem->categoryId }}"
-                {{ $categoryItem->categoryId == $member->category ? "selected" : "" }}>
+            <option value="{{ $categoryItem->categoryId }}" {{ $categoryItem->categoryId == $member->category ?
+                "selected" : "" }}>
                 {{ $categoryItem->categoryName }}
             </option>
             @endforeach
