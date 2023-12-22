@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ch9</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/myall.css">
+    <style>
+        .demo01 {
+            width: 400px;
+            height: 200px;
+            border: 2px solid var(--mycolor04);
+        }
+
+        .box01 {
+            width: 50px;
+            height: 50px;
+            background-color: var(--mycolor01);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container p-5">
+        <div class="display-4 fw-900 mb-3">1. position(基本定位)</div>
+        <div class="demo01 position-relative">
+            <div class="box01 position-absolute"></div>
+            <div class="box01 position-absolute start-50"></div>
+            <div class="box01 position-absolute start-100"></div>
+            <div class="box01 position-absolute top-50"></div>
+            <div class="box01 position-absolute top-50 start-50"></div>
+            <div class="box01 position-absolute top-50 start-100"></div>
+            <div class="box01 position-absolute top-100"></div>
+            <div class="box01 position-absolute top-100 start-50"></div>
+            <div class="box01 position-absolute top-100 start-100"></div>
+        </div>
+    </div>
+    <div class="container p-5">
+        <div class="display-4 fw-900 mb-5">2. position(translate-middle)</div>
+        <div class="demo01 position-relative">
+            <div class="box01 position-absolute translate-middle"></div>
+            <div class="box01 position-absolute start-50 translate-middle"></div>
+            <div class="box01 position-absolute start-100 translate-middle"></div>
+            <div class="box01 position-absolute top-50 translate-middle"></div>
+            <div class="box01 position-absolute top-50 start-50 translate-middle"></div>
+            <div class="box01 position-absolute top-50 start-100 translate-middle"></div>
+            <div class="box01 position-absolute top-100 translate-middle"></div>
+            <div class="box01 position-absolute top-100 start-50 translate-middle"></div>
+            <div class="box01 position-absolute top-100 start-100 translate-middle"></div>
+        </div>
+    </div>
+
+    <div class="container p-5">
+        <div class="display-4 fw-900 mb-3">3. position(貼齊邊線)</div>
+        <div class="demo01 position-relative">
+            <div class="box01 position-absolute"></div>
+            <div class="box01 position-absolute start-50 translate-middle-x"></div>
+            <div class="box01 position-absolute end-0"></div>
+            <div class="box01 position-absolute top-50 translate-middle-y"></div>
+            <div class="box01 position-absolute top-50 start-50 translate-middle"></div>
+            <div class="box01 position-absolute top-50 end-0 translate-middle-y"></div>
+            <div class="box01 position-absolute bottom-0"></div>
+            <div class="box01 position-absolute bottom-0 start-50 translate-middle-x"></div>
+            <div class="box01 position-absolute bottom-0 end-0"></div>
+        </div>
+    </div>
+
+    <div class="container p-5">
+        <div class="display-4 fw-900 mb-3">4. position(範例01)</div>
+        <button class="btn btn-primary position-relative">訊息
+            <span class="bg-danger rounded-pill position-absolute top-0 start-100 translate-middle badge">+10</span>
+        </button>
+    </div>
+
+    <div class="container p-5">
+        <div class="display-4 fw-900 mb-3">5. position(範例02)</div>
+        <div class="position-relative">
+            <div class="progress" style="height: 2px;">
+                <div class="progress-bar" style="width: 50%;"></div>
+            </div>
+            <button class="btn btn-primary btn-sm rounded-pill position-absolute top-0 start-0 translate-middle"
+                style="width: 2rem; height: 2rem;">1</button>
+            <button class="btn btn-primary btn-sm rounded-pill position-absolute top-0 start-50 translate-middle"
+                style="width: 2rem; height: 2rem;">2</button>
+            <button class="btn btn-secondary btn-sm rounded-pill position-absolute top-0 start-100 translate-middle"
+                style="width: 2rem; height: 2rem;">3</button>
+        </div>
+    </div>
+
+    <div class="container p-5">
+        <div class="display-4 fw-900 mb-3">6. fixed(固定位置)</div>
+        <div class="text-bg-success p-3 h4 fixed-top">固定上方</div>
+        <div class="text-bg-warning p-3 h4 fixed-bottom">固定下方</div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

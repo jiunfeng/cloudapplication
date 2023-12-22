@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/myall.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 class="123456" id="pageTitle">hello</h1>
+    <a id="logo"></a>
+</body>
+<script>
+    var pageTitle = document.getElementById("pageTitle");
+    console.log(pageTitle.getAttribute('class'));//hello
+
+    var elementClass = document.getElementById("logo");
+    console.log(elementClass.getAttribute('id') + elementClass.getAttribute('class'));
+</script>
+
+</html>

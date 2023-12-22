@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>串接資料練習</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/myall.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row" id="mydata">
+            <div class="col-md-4 mt-3">
+                <img src="https://fakeimg.pl/600x300/200" class="img-fluid">
+                <h4>店名: XXXX</h4>
+                <h4>地址: XXXXXX</h4>
+                <h4>電話: XXXXX</h4>
+                <button class="btn btn-warning w-100">詳細資料</button>
+            </div>
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+        //主程式
+        $(function () {
+            //串接資料
+            $.ajax({
+                type: "GET",
+                url: "https://data.moa.gov.tw/Service/OpenData/ODwsv/ODwsvTravelFood.aspx?IsTransData=1&UnitId=193",
+                success: showdata,
+                error: function () {
+                    alert("串接資料錯誤!");
+                }
+            });
+        });
+
+        function showdata(data) {
+            console.log(data);
+            console.log(data[0].Name);
+            for(var i=0; i<139; i++){
+                var strHTML = '<div class="col-md-4 mt-3"><img src="https://fakeimg.pl/600x300/200" class="img-fluid"><h4>店名: ' + data[i].Name + '</h4><h4>地址: XXXXXX</h4><h4>電話: XXXXX</h4><button class="btn btn-warning w-100">詳細資料</button></div>';
+                $("#mydata").append(strHTML);
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -15,7 +15,14 @@
 
 
     <div id="dataContainer">
-        <h1>店名: XXXXXX</h1>
+        <div class="row" id="mydata">
+            <div class="col-md-4 mt-3">
+                <img src="https://fakeimg.pl/300x200/200" alt="" class="img-fluid">
+                <h4>店名XXXX</h4>
+                <h3>地址</h3>
+                <h3>電話</h3>
+            </div>
+        </div>
     </div>
     <script>
         $(function () {
@@ -34,8 +41,14 @@
             //     $("#dataContainer").append("<h1>" + data[i].Name + "</h1>");
             // }
 
+            // 兩種方法都可以概念不同
             data.forEach(element => {
-                $("#dataContainer").append("<h1>" + element.Name + "</h1>");
+                // var sty = `<div class="col-md-4 mt-3"><img src="https://fakeimg.pl/300x200/200" alt="" class="img-fluid"><h4>店名${element.Name}</h4><h3>地址${element.Address}</h3><h3>電話${element.Tel}</h3></div>`
+                var sty = '<div class="col-md-4 mt-3"><img src="https://fakeimg.pl/300x200/200" alt="" class="img-fluid"><h4>店名'
+                    + element.Name + '</h4><h3>地址'
+                    + element.Address +
+                    '</h3><h3>電話' + element.Tel + '</h3></div>'
+                $("#mydata").append(sty);
             });
         }
     </script>

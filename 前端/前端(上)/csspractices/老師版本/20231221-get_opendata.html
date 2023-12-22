@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>open data練習</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/myall.css">
+</head>
+<body>
+    <div id="mydata">
+        <h1>店名: XXXXXXX</h1>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+        //主程式
+        $(function(){
+            // for(var i=0; i<9; i++){
+            //     console.log("hello world!"+i);
+            // }
+
+            //串接opendata
+            $.ajax({
+                type: "GET",
+                url: "https://data.moa.gov.tw/Service/OpenData/ODwsv/ODwsvTravelFood.aspx?IsTransData=1&UnitId=193",
+                success: showdata,
+                error: function(){
+                    alert("系統錯誤!");
+                }
+            });
+        });
+
+        function showdata(data){
+            console.log(data);
+            $("#mydata").html(data);
+            for(var i=0; i<3; i++){
+                console.log(data[i].Name);
+                $("#mydata").append(data[i].Name);
+            }
+        }
+    </script>
+</body>
+</html>
