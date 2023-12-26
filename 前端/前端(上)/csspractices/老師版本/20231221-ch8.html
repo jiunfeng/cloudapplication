@@ -23,7 +23,7 @@
 
     }
 
-    .time-line::after {
+    .time-line::before {
         position: absolute;
         content: "";
         top: 0;
@@ -33,12 +33,22 @@
         left: 50%;
         transform: translateX(-50%);
     }
+
+    .time-line-point {
+        position: relative;
+    }
+
+    time-line-point::before {
+        position: absolute;
+        background-color: red;
+        content: "456456456";
+    }
 </style>
 
 <body>
     <div class="container">
         <div class="time-line">
-            <div class="row justify-content-center">
+            <div class="row justify-content-center time-line-point">
                 <div class="col-md-5 bg-cover myimg" style="background-image: url(images/cake01.jpg);"></div>
                 <div class="col-md-5">
                     <div class="mytext">

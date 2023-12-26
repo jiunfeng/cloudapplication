@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./node_modules/animate.css/animate.min.css">
+    <link rel="stylesheet" href="./bootstrap-5.3.2-dist/css/bootstrap.min.css">
+    <script src="./bootstrap-5.3.2-dist/js/bootstrap.bundle.js"></script>
+</head>
+<style>
+    .box {
+        background-color: rebeccapurple;
+        height: 100px;
+        width: 50%;
+        margin: 50px;
+    }
+</style>
+
+<body>
+    <div id="myElement">
+        <h1>An animated element</h1>
+    </div>
+    <div class="container">
+        <div class="row anim_in box">2222222222222222222
+            <div class="col-2">123</div>
+        </div>
+        <div class="row anim_in box flex-row-reverse">111111111111111
+            <div class="col-2">123</div>
+        </div>
+        <div class="row anim_in box"></div>
+        <div class="row anim_in box"></div>
+        <div class="row anim_in box"></div>
+        <div class="row anim_in box"></div>
+        <div class="row anim_in box"></div>
+        <div class="row anim_in box"></div>
+        <div class="row anim_in box"></div>
+        <div class="row anim_in box"></div>
+    </div>
+</body>
+
+<script>
+    var element = document.querySelector('#myElement');
+    console.log(element)
+    element.addEventListener('mouseenter', function () {
+        element.classList.add('animate__animated', 'animate__fadeInLeft', 'animate__slower');
+    });
+
+    element.addEventListener('animationend', function () {
+        element.classList.remove('animate__fadeInLeft');
+    });
+
+
+    var elementsToWatch = document.querySelectorAll('.box');
+    console.log(elementsToWatch);
+    // 添加滚动事件监听器
+    window.addEventListener('scroll', function () {
+        elementsToWatch.forEach(function (element) {
+            // 获取目标元素的位置信息
+            var elementRect = element.getBoundingClientRect();
+
+
+            // 检查目标元素是否在视口中可见
+            if (
+                elementRect.top >= 0 &&
+                elementRect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+            ) {
+                // 目标元素在视口中可见，执行相应的操作
+                console.log('Element is in the viewport!');
+
+                element.classList.add('animate__animated', 'animate__fadeInLeft');
+                element.addEventListener('animationend', function () {
+                    element.classList.remove('animate__fadeInLeft');
+                });
+
+                // 可以在这里执行针对每个元素的特定操作
+            }
+        });
+    });
+</script>
+
+<script>
+    console.log("-----------");
+    console.log(element);
+</script>
+
+</html>
