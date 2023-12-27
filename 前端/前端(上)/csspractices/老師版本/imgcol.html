@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>切版</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <script src="./js/bootstrap.bundle.min.js"></script>
+</head>
+<style>
+    .box {
+        background-color: red;
+        height: 70vh;
+    }
+
+    .bg-img {
+        background-image: url('./images/cake02.jpg');
+        background-size: cover;
+        /* 或者使用 background-size: 100% 100%; */
+        background-repeat: no-repeat;
+        background-position: center;
+
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="row m-5" style="height: 80vh;">
+            <!-- 藍色最大切 紅色第二切 紫色第三切-->
+            <div class="col-8" style="background-color: blue;">
+                <div class="row flex-column h-100" style="background-color: brown;">
+                    <div class="col p-0">
+                        <div class="row w-100 h-100 m-0">
+                            <div class="col bg-img"></div>
+                            <div class="col bg-img"></div>
+                        </div>
+                    </div>
+                    <div class="col p-0">
+                        <div class="row w-100 h-100 m-0">
+                            <div class="col-4 bg-img"></div>
+                            <div class="col-8 bg-img"></div>
+                        </div>
+                    </div>
+                    <div class="col p-0">
+                        <div class="row w-100 h-100 m-0">
+                            <div class="col bg-img"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 p-0" style="background-color: blue;">
+                <div class="row w-100 h-100 flex-column m-0">
+                    <div class="col bg-img p-0"></div>
+                    <div class="col bg-img p-0"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- 好奇怪??? -->
+    <div class="container" style="height: 80vh;">
+        <div class="row w-100 flex-column">
+            <div class="col">1</div>
+            <div class="col">2</div>
+            <div class="col">3</div>
+        </div>
+        <div class="row w-100 flex-column">
+            <div class="col-4">1</div>
+            <div class="col-4">2</div>
+            <div class="col-4">3</div>
+        </div>
+    </div>
+</body>
+
+</html>
