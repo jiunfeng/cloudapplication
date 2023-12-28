@@ -2,5 +2,6 @@
     "java.project.sourcePaths": [
         "Java",
         "PHP"
-    ]
+    ],
+    "liveServer.settings.port": 5501
 }
