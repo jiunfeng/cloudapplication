@@ -88,6 +88,10 @@ public class App10_1 {
 
         bb2.show();
         bb2.sub();
-
+        Class ca = bb2.getClass();
+        System.out.println(ca);
+        int[] x = { 53, 26, 37, 94 };
+        int[] y = { 53, 26, 37, 94 };
+        System.out.println(x.equals(y));
     }
 }
