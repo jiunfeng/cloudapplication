@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "App10_5",
+            "request": "launch",
+            "mainClass": "org.example.App10_5",
+            "projectName": "demo"
+        },
+        {
+            "type": "java",
             "name": "Hw6_1",
             "request": "launch",
             "mainClass": "practice.ch06.Hw6_1",
